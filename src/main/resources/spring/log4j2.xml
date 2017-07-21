@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Properties>
+		<Property name="logPath">logs</Property>
+	</Properties>
+	
+	<Appenders>
+		<Appender name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyyy-MM-ddHH:mm:ss,SSS}[%rms][%t][%-5p][%c][%p]:%L-%msg%n" />
+		</Appender>
+	</Appenders>
+</Configuration>

@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+li a{
+	color:white;
+}
+
+a{
+	text-decoration: none;
+}
+
+li{
+	cursor: pointer;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" 
+	xsi:schemaLocation="
+		http://xmlns.jcp.org/xml/ns/javaee
+		http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd
+	">
+	<display-name>himma</display-name>
+	
+	<!-- 初始化spring容器,ws需要同时初始化，hession不用,springmvc必须后初始化 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+				classpath*:spring/spring-context.xml,
+				<!-- classpath*:spring/springmvc-servlet.xml, -->
+				classpath*:spring/cxf-servlet.xml,
+				<!-- classpath*:spring/hessian-servlet.xml, -->
+				classpath*:spring/spring-rabbitmq.xml
+		</param-value>
+	</context-param>
+	
+	<context-param>
+	    <param-name>spring.profiles.active</param-name>
+	    <param-value>hello</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>
+		 	org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	
+	<!-- cxf web service -->
+	<servlet>		
+		<description>Apache CXF Endpoint</description>
+		<servlet-name>cxf</servlet-name>
+		<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:spring/cxf-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cxf</servlet-name>
+		<url-pattern>/ws/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- hession -->
+	<servlet>
+		<servlet-name>hessian</servlet-name>
+		<servlet-class>cn.himma.hessian.ui.HessianServiceServlet</servlet-class>
+		<!-- 不在根路径或者名称不按“【name】-servlet.xml”的需要指定 -->
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:spring/hessian-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>hessian</servlet-name>
+		<url-pattern>/hessian/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- springmvc -->
+	<servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				classpath*:spring/springmvc-servlet.xml
+			</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+</web-app>

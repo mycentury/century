@@ -1,0 +1,8 @@
+{
+	"/": {
+		"storage": {
+		    "type": "disk",
+		    "device": "/dev/as"
+	    }
+	}
+}

@@ -1,0 +1,234 @@
+
+Windows XP Professional Product Documentation > Performance and maintenance
+Command-line reference A-Z
+A    B    C    D    E    F    G    H    I    L    M    N    O    P    Q    R    S    T    U    V    W    X
+ 
+To find information about a command, on the A-Z button menu at the top of this page, click the letter that the command starts with, and then click the command name.
+In addition to the tools installed with Windows XP, there are over 40 support tools included on the Windows XP CD. You can use these tools to diagnose and resolve computer problems. For more information about these support tools, see Windows Support Tools For information about installing support tools, see Install Windows Support Tools
+For more information about changes to the functionality of MS-DOS commands, new command-line tools, command shell functionality, configuring the command prompt, and automating commmand-line tasks, see Command-line reference
+Some command-line tools require the user to have administrator-level privileges on source and/or target computers.
+Command-line tools must be run at the prompt of the Cmd.exe command interpreter. To open Command Prompt, click Start, click Run, type cmd, and then click OK. To view help at the command-line, at the command prompt, type the following:
+CommandName /?
+A
+Arp
+Assoc
+At
+Atmadm
+Attrib
+Top of pageTop of page
+B
+Batch files
+Bootcfg
+Break
+Top of pageTop of page
+C
+Cacls
+Call
+Change
+Chcp
+Chdir
+Chkdsk
+Chkntfs
+Cipher
+Cls
+Cmd
+Cmstp
+Color
+Command shell overview
+Comp
+Compact
+Convert
+Copy
+Cprofile
+CScript overview
+Top of pageTop of page
+D
+Date
+Defrag
+Del
+Dir
+Diskcomp
+Diskcopy
+DiskPart
+Doskey
+Driverquery
+Top of pageTop of page
+E
+Echo
+Endlocal
+Eventcreate
+Eventquery
+Eventtriggers
+Evntcmd
+Exit
+Expand
+Top of pageTop of page
+F
+Fc
+Filter commands
+Find
+Findstr
+Finger
+Flattemp
+For
+Format
+Fsutil
+Ftp
+Ftp subcommands
+Ftype
+Top of pageTop of page
+G
+Getmac
+Goto
+Gpresult
+Gpupdate
+Graftabl
+Top of pageTop of page
+H
+Help
+Helpctr
+Hostname
+Top of pageTop of page
+I
+If
+Ipconfig
+Ipseccmd
+Ipxroute
+Irftp
+Top of pageTop of page
+L
+Label
+Lodctr
+Logman
+Lpq
+Lpr
+Top of pageTop of page
+M
+Macfile
+Mkdir (md)
+Mmc
+Mode
+More
+Mountvol
+Move
+MS-DOS subsystem configuration commands
+Msiexec
+Msinfo32
+Top of pageTop of page
+N
+Nbtstat
+Net services overview
+Net services commands
+Netsh command overview
+Netsh commands for AAAA
+Netsh commands for DHCP
+Netsh diagnostic (diag) commands
+Netsh commands for Interface IP
+Netsh commands for RAS
+Netsh commands for Routing
+Netsh commands for WINS
+Netstat
+Nslookup
+Nslookup subcommands
+Ntbackup
+Ntcmdprompt
+Ntsd
+Top of pageTop of page
+O
+Openfiles
+Top of pageTop of page
+P
+Pagefileconfig
+Path
+Pathping
+Pause
+Pbadmin
+Pentnt
+Perfmon
+Ping
+Popd
+Print
+Prncnfg
+Prndrvr
+Prnjobs
+Prnmngr
+Prnport
+Prnqctl
+Prompt
+Pushd
+Top of pageTop of page
+Q
+Query
+Top of pageTop of page
+R
+Rasdial
+Rcp
+Recover
+Redirection operators
+Reg
+Regsvr32
+Relog
+Rem
+Rename
+Replace
+Reset session
+Rexec
+Rmdir
+Route
+Rsh
+Rsm
+Runas
+Top of pageTop of page
+S
+Sc
+Schtasks
+Secedit
+Set
+Setlocal
+Shift
+Shutdown
+Sort
+Start
+Subst
+Systeminfo
+System File Checker (sfc)
+Top of pageTop of page
+T
+Taskkill
+Tasklist
+Tcmsetup
+TCP/IP utilities and services
+Telnet commands
+Terminal Services commands
+Tftp
+Time
+Title
+Tracerpt
+Tracert
+Tree
+Type
+Typeperf
+Top of pageTop of page
+U
+Unlodctr
+Top of pageTop of page
+V
+Ver
+Verify
+Vol
+Vssadmin
+Top of pageTop of page
+W
+W32tm
+Winnt
+Winnt32
+WMIC overview
+Top of pageTop of page
+X
+Xcopy
+
+Top of pageTop of page
+
+
+Manage Your Profile |Legal |Contact Us
+© 2016 Microsoft Corporation. All rights reserved. Contact Us |Terms of Use |Trademarks |Privacy & Cookies

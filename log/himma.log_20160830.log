@@ -1,0 +1,2 @@
+2016-08-30 17:51:21,786[0ms][main][cn.himma.mq.RabbitMQSender][INFO] - send success!
+2016-08-30 17:51:21,801[15ms][org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1][cn.himma.mq.ConsumerListener][INFO] - json message: Fine!Thank you!And you?

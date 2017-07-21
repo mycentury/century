@@ -1,0 +1,5 @@
+----------------------------------------------
+dependency			version
+jedis				2.7.3
+spring-data-redis	1.7.2.RELEASE
+spring-core			4.2.5.RELEASE

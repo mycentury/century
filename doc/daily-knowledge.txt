@@ -1,0 +1,21 @@
+--------------------------------------------------------------------------------------------
+1.task配置
+<task:executor id="executor" pool-size="5-10" keep-alive="60" queue-capacity="2" rejection-policy="DISCARD" />
+<task:scheduler id="scheduler" pool-size="10" />
+<task:annotation-driven executor="executor" scheduler="scheduler" />
+task不会被下一次task覆盖，task的队列满了之后，有以下几种操作供配置：
+- ABORT				-流产，即直接丢弃新的task
+- CALLER_RUNS		-调起，直接调起新来task，并且在这个task完成之前不会再产生新的task，同时可能会抛弃队列中的task
+- DISCARD			-放弃，放弃当前（新来）的task
+- DISCARD_OLDEST	-放弃旧的久的，放弃队列中前端的task
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+2.maven测试
+(1)跳过测试
+maven-surefire-plugin的configuration中加入skip，skipExec或skipTests
+maven-surefire-plugin的configuration中加入excludes和exclude
+命令加“ -Dmaven.test.skip=true”
+(2)跳过错误测试
+maven-surefire-plugin的configuration中加入testFailureIgnore
+命令加“ -Dmaven.test.failure.ignore=true”
+--------------------------------------------------------------------------------------------

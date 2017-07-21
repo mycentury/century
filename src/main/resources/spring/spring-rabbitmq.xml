@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context-4.2.xsd
+       http://www.springframework.org/schema/rabbit 
+       http://www.springframework.org/schema/rabbit/spring-rabbit-1.4.xsd 
+    ">
+
+    <rabbit:connection-factory id="rabbitConnectFactory" 
+		addresses="${rabbitmq.addresses}" username="${rabbitmq.username}" password="${rabbitmq.password}" />
+	<rabbit:admin id="rabbitAdmin" connection-factory="rabbitConnectFactory" />
+	
+	<rabbit:listener-container connection-factory="rabbitConnectFactory">
+	    <rabbit:listener ref="consumerListener" admin="rabbitAdmin" method="onMessage" queue-names="${rabbitmq.queue.testone}" />
+	</rabbit:listener-container>
+	
+	<rabbit:template id="rabbitTemplate" exchange="${rabbitmq.exchange.testone}" connection-factory="rabbitConnectFactory" />
+</beans>

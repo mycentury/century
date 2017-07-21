@@ -1,0 +1,4 @@
+(1)问题：加了自动扫描component-scan，mvc却还是一直找不到请求路径
+	解决：controller扫描最好在mvc中配置，因为mvc初始化时需要
+(2)问题：hessian接口发布成功却无法访问
+	解决：springmvc-servlet.xml优先级最低，不可先加载

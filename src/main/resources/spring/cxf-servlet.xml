@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://cxf.apache.org/jaxws
+		http://cxf.apache.org/schemas/jaxws.xsd
+	">
+		
+	<jaxws:server id="worldService" serviceClass="cn.himma.ws.api.WorldApi" address="/world" >
+		<jaxws:serviceBean>
+			<!-- 名称有冲突时，以下不可用 -->
+			<ref bean="worldApiImpl" />
+			<!-- <bean class="cn.himma.ws.impl.WorldApiImpl" /> -->
+		</jaxws:serviceBean>
+	</jaxws:server>
+	
+</beans>

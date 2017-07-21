@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+#emojies{
+	width:600px;
+	height: 200px;
+	border: thin solid black;
+	margin-top: -1px;
+	display: none;
+}
+
+#emoji_pics{
+	text-align: left;
+	font-size: 0;
+	height: 170px;
+	letter-spacing:0px;
+}
+
+#window{
+    width : 300px;
+    /* position : absolute; */
+    top : 150px;
+    left: 0px;
+    display : none;
+    background-color: white;
+}
+
+#magnetism {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: .5;
+}
