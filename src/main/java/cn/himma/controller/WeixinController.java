@@ -7,6 +7,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletRequest;
@@ -35,8 +36,10 @@ public class WeixinController {
 
     @RequestMapping(value = "weixin.do")
     public void verifyByWeixin(HttpServletRequest request, HttpServletResponse response) {
-        for (Entry<String, String[]> entry : request.getParameterMap().entrySet()) {
-            System.out.println(entry.getKey().toString() + "=" + Arrays.toString(entry.getValue()).toString());
+        @SuppressWarnings("unchecked")
+        Map<String, Object> parameterMap = request.getParameterMap();
+        for (Entry<String, Object> entry : parameterMap.entrySet()) {
+            System.out.println(entry.getKey().toString() + "=" + entry.getValue().toString());
         }
         String signature = request.getParameter("signature");
         String timestamp = request.getParameter("timestamp");
@@ -86,7 +89,7 @@ public class WeixinController {
             return null;
         }
         return echoStr;
-        // 官方提供方法不会使用
+        // 官方提供方法有误
         // String encodingAesKey = "aPB4nvtgRHd4zdPulBgmPTjNvMMQpwJmanrpa0cfCsy";
         // String appId = "wxe418d74cd22c8da9";
         // try {

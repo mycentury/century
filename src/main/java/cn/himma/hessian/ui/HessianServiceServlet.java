@@ -17,16 +17,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.hubs1.base.hessian.domain.HmethodDomain;
-import net.hubs1.base.hessian.domain.HparamDomain;
-import net.hubs1.base.hessian.domain.HserviceDomain;
-import net.hubs1.base.hessian.domain.VisitDomain;
-
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.context.ApplicationContext;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.DispatcherServlet;
+
+import cn.himma.hessian.ui.domain.HmethodDomain;
+import cn.himma.hessian.ui.domain.HparamDomain;
+import cn.himma.hessian.ui.domain.HserviceDomain;
+import cn.himma.hessian.ui.domain.VisitDomain;
 
 public class HessianServiceServlet extends DispatcherServlet {
 	private static final long serialVersionUID = -6115220116808169703L;

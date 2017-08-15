@@ -116,11 +116,6 @@
 			<version>${hessian.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>net.hubs1.base</groupId>
-			<artifactId>hessian-ui</artifactId>
-			<version>0.0.8</version>
-		</dependency>
-		<dependency>
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>servlet-api</artifactId>
 		    <version>2.5</version>
@@ -180,11 +175,6 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
-		</dependency>
-		<dependency>
-			<groupId>3rd</groupId>
-			<artifactId>QRCode</artifactId>
-			<version>5.0</version>
 		</dependency>
 		<dependency>
 		    <groupId>com.google.zxing</groupId>

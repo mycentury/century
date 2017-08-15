@@ -4,13 +4,13 @@ import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.Map;
 
-import net.hubs1.base.hessian.domain.HserviceDomain;
-import net.hubs1.base.hessian.domain.VisitDomain;
-
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.apache.log4j.Logger;
 import org.springframework.util.ClassUtils;
+
+import cn.himma.hessian.ui.domain.HserviceDomain;
+import cn.himma.hessian.ui.domain.VisitDomain;
 
 public class HessianRemoteInterceptor implements MethodInterceptor {
 	private static final Logger accesslog = Logger
